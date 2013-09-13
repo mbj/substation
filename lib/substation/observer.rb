@@ -20,7 +20,7 @@ module Substation
 
     # Coerce +input+ to an instance of {Observer}
     #
-    # @param [NilClass, String, Array<String>] input
+    # @param [nil, String, Array<String>] input
     #   0..n observer class names
     #
     # @return [Observer::NULL, Object, Observer::Chain]
@@ -29,7 +29,7 @@ module Substation
     # @api private
     def self.coerce(input)
       case input
-      when NilClass
+      when nil
         NULL
       when Array
         Chain.new(input.map { |item| coerce(item) })
