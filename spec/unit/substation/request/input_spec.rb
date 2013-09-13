@@ -7,8 +7,8 @@ describe Request, '#input' do
   subject { object.input }
 
   let(:object) { described_class.new(env, input) }
-  let(:env)    { mock }
-  let(:input)  { mock }
+  let(:env)    { double }
+  let(:input)  { double }
 
   it { should equal(input) }
 end

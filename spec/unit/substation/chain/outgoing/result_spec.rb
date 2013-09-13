@@ -14,8 +14,8 @@ describe Chain::Outgoing, '#result' do
 
   let(:response) { Response::Success.new(request, input) }
   let(:request)  { Request.new(env, input) }
-  let(:env)      { mock }
-  let(:input)    { mock }
+  let(:env)      { double }
+  let(:input)    { double }
 
   it { should be(response) }
 end

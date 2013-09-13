@@ -7,12 +7,12 @@ describe Dispatcher::Action, '#call' do
   subject { object.call(request) }
 
   let(:object)   { described_class.new(klass, observer) }
-  let(:klass)    { mock }
-  let(:observer) { mock }
+  let(:klass)    { double }
+  let(:observer) { double }
   let(:request)  { Request.new(env, input) }
-  let(:env)      { mock }
-  let(:input)    { mock }
-  let(:response) { mock }
+  let(:env)      { double }
+  let(:input)    { double }
+  let(:response) { double }
 
   before do
     klass.should_receive(:call).with(request).and_return(response)

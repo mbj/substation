@@ -37,7 +37,7 @@ describe Utils, '.coerce_callable' do
   end
 
   context "with an unsupported handler" do
-    let(:handler) { mock }
+    let(:handler) { double }
 
     specify do
       expect { subject }.to raise_error(ArgumentError)

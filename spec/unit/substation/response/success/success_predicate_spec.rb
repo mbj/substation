@@ -7,9 +7,9 @@ describe Response::Success, '#success?' do
 
   let(:object)  { described_class.new(request, output) }
   let(:request) { Request.new(env, input) }
-  let(:env)     { mock }
-  let(:input)   { mock }
-  let(:output)  { mock }
+  let(:env)     { double }
+  let(:input)   { double }
+  let(:output)  { double }
 
   it { should be(true) }
 end

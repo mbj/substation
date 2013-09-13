@@ -7,9 +7,9 @@ describe Request, '#success' do
   subject { object.success(output) }
 
   let(:object) { described_class.new(env, input) }
-  let(:env)    { mock }
-  let(:input)  { mock }
-  let(:output) { mock }
+  let(:env)    { double }
+  let(:input)  { double }
+  let(:output) { double }
 
   it { should eql(Response::Success.new(object, output)) }
 end

@@ -9,8 +9,8 @@ describe Dispatcher, '#call' do
   let(:object)  { described_class.coerce(config, env) }
   let(:config)  { { 'test' => { 'action' => 'Spec::Action::Success' } } }
   let(:request) { Request.new(env, input) }
-  let(:input)   { mock }
-  let(:env)     { mock }
+  let(:input)   { double }
+  let(:env)     { double }
 
   let(:expected_response) do
     Spec::Action::Success.call(request)

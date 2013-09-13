@@ -21,8 +21,8 @@ describe Observer, '.coerce' do
   end
 
   context 'with other input' do
-    let(:input)   { mock }
-    let(:coerced) { mock }
+    let(:input)   { double }
+    let(:coerced) { double }
 
     before do
       Utils.should_receive(:coerce_callable).with(input).and_return(coerced)

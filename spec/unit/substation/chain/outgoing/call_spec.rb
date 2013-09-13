@@ -18,8 +18,8 @@ describe Chain::Outgoing, '#call' do
 
   let(:response) { Response::Success.new(request, :altered) }
   let(:request)  { Request.new(env, input) }
-  let(:env)      { mock }
-  let(:input)    { mock }
+  let(:env)      { double }
+  let(:input)    { double }
 
   it { should eql(response) }
 end

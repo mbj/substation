@@ -4,7 +4,7 @@ describe Observer::NULL, '#call' do
   subject { object.call(input) }
 
   let(:object) { described_class }
-  let(:input)  { mock   }
+  let(:input)  { double   }
 
   it_should_behave_like 'a command method'
 

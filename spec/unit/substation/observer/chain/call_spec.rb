@@ -5,9 +5,9 @@ describe Observer::Chain, '#call' do
 
   let(:object) { Observer::Chain.new(observers) }
 
-  let(:response)   { mock('Response') }
-  let(:observer_a) { mock('Observer A') }
-  let(:observer_b) { mock('Observer B') }
+  let(:response)   { double('Response') }
+  let(:observer_a) { double('Observer A') }
+  let(:observer_b) { double('Observer B') }
 
   let(:observers) { [observer_a, observer_b] }
 

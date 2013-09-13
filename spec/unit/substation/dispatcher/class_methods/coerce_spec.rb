@@ -10,7 +10,7 @@ describe Dispatcher, '.coerce' do
     'test' => { 'action' => 'Spec::Action::Success' }
   }}
 
-  let(:env) { mock }
+  let(:env) { double }
 
   let(:coerced) {{
     :test => described_class::Action.coerce(:action => 'Spec::Action::Success')

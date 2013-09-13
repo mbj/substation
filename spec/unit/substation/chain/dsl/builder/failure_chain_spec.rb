@@ -21,7 +21,7 @@ describe "Initializing a processor's failure chain" do
   }
 
   let(:request) { Request.new(app_env, input) }
-  let(:app_env) { mock }
+  let(:app_env) { double }
   let(:input)   { :invalid }
 
   let(:response) { Response::Failure.new(request, Spec::Presenter.new(:failure)) }

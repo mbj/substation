@@ -5,7 +5,7 @@ require 'spec_helper'
 describe Processor::Evaluator, '#call' do
   subject { object.call(request) }
 
-  let(:request) { Request.new(mock('env'), input) }
+  let(:request) { Request.new(double('env'), input) }
 
   context "when no failure chain is registered" do
 
